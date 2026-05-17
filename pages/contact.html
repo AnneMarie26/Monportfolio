@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Anne Marie Honorine SARR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo">AD<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="competences.html">Compétences</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+ 
+  <section class="page-hero">
+    <span class="section-tag">Restons connectés</span>
+    <h1>Me <span class="highlight">Contacter</span></h1>
+    <p>Disponible pour des projets, collaborations ou simplement échanger.</p>
+  </section>
+
+
+  <div class="contact-info-grid">
+    <div class="contact-card">
+      <div class="contact-icon">📧</div>
+      <div>
+        <h4>Email</h4>
+        <p>annemariehonorinesarr25@gmail.com</p>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">📍</div>
+      <div>
+        <h4>Localisation</h4>
+        <p>Dakar, Sénégal</p>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">💼</div>
+      <div>
+        <h4>Disponibilité</h4>
+        <p>Disponible dès maintenant</p>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">⏱️</div>
+      <div>
+        <h4>Temps de réponse</h4>
+        <p>Sous 24 à 48 heures</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="forms-wrapper">
+
+    
+    <div class="form-block">
+      <h3 class="form-block-title">✉️ Formulaire de contact</h3>
+      <p class="form-block-sub">Envoyez-moi un message direct. Je vous répondrai rapidement !</p>
+
+      <form method="POST" action="contact.php">
+        <input type="hidden" name="type" value="contact" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="c-nom">Nom complet *</label>
+            <input type="text" id="c-nom" name="nom" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="c-email">Adresse e-mail *</label>
+            <input type="email" id="c-email" name="email" placeholder="votre@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="c-sujet">Sujet *</label>
+          <input type="text" id="c-sujet" name="sujet" placeholder="Objet de votre message" required />
+        </div>
+        <div class="form-group">
+          <label for="c-message">Message *</label>
+          <textarea id="c-message" name="message" rows="5" placeholder="Dites-moi tout..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Envoyer le message ✉️</button>
+      </form>
+    </div>
+
+    
+    <div class="form-block">
+      <h3 class="form-block-title">🚀 Demande de projet</h3>
+      <p class="form-block-sub">Décrivez votre projet et je reviendrai vers vous avec une proposition.</p>
+
+      <form method="POST" action="contact.php">
+        <input type="hidden" name="type" value="projet" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="p-nom">Votre nom *</label>
+            <input type="text" id="p-nom" name="nom" placeholder="Nom complet" required />
+          </div>
+          <div class="form-group">
+            <label for="p-email">Email *</label>
+            <input type="email" id="p-email" name="email" placeholder="votre@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="p-type">Type de projet *</label>
+          <select id="p-type" name="type_projet" required>
+            <option value="" disabled selected>Sélectionnez un type</option>
+            <option value="site-vitrine">Site vitrine</option>
+            <option value="e-commerce">E-Commerce</option>
+            <option value="blog">Blog / CMS</option>
+            <option value="application">Application web</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="p-budget">Budget estimé</label>
+          <select id="p-budget" name="budget">
+            <option value="" disabled selected>Sélectionnez une fourchette</option>
+            <option value="petit">Moins de 100 000 FCFA</option>
+            <option value="moyen">100 000 – 300 000 FCFA</option>
+            <option value="grand">Plus de 300 000 FCFA</option>
+            <option value="discuter">À discuter</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="p-delai">Délai souhaité</label>
+          <input type="text" id="p-delai" name="delai" placeholder="Ex : 3 semaines, 1 mois..." />
+        </div>
+        <div class="form-group">
+          <label for="p-description">Description du projet *</label>
+          <textarea id="p-description" name="description" rows="5"
+            placeholder="Décrivez votre projet : objectifs, fonctionnalités, public cible..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Envoyer ma demande 🚀</button>
+      </form>
+    </div>
+
+    
+    <div class="form-block">
+      <h3 class="form-block-title">🔍 Recherche de projets</h3>
+      <p class="form-block-sub">Recherchez dans mon portfolio par mots-clés ou technologie.</p>
+
+      <form method="GET" action="projets.html">
+        <div class="form-group">
+          <label for="s-keyword">Mots-clés *</label>
+          <div class="search-row">
+            <input type="search" id="s-keyword" name="q" placeholder="Ex : PHP, formulaire, responsive..." />
+            <button type="submit" class="btn btn-primary">Rechercher</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="s-tech">Filtrer par technologie</label>
+          <select id="s-tech" name="tech">
+            <option value="">Toutes les technologies</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+            <option value="php">PHP</option>
+            <option value="mysql">MySQL</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="s-annee">Année</label>
+          <select id="s-annee" name="annee">
+            <option value="">Toutes les années</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Lancer la recherche 🔍</button>
+      </form>
